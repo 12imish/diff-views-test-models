@@ -1,6 +1,6 @@
 {
     "glossary": {
-        "title": "example glossary 2.0",
+        "title": "example glossary",
 		"GlossDiv": {
             "title": "S",
 			"GlossList": {
@@ -11,8 +11,8 @@
 					"Acronym": "SGML",
 					"Abbrev": "ISO 8879:1986",
 					"GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-						"GlossSeeAlso": ["GML", "XML"]
+                        "para": "used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML", "html"]
                     },
 					"GlossSee": "markup"
                 }
@@ -43,19 +43,22 @@
             "vOffset": 100,
             "alignment": "center",
             "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+        },
+        "menu": {
+            "id": "file",
+            "value": "File",
+            "popup": {
+              "menuitem": [
+                {"value": "New", "onclick": "CreateNewDoc()"},
+                {"value": "Open", "onclick": "OpenDoc()"},
+                {"value": "Close", "onclick": "CloseDoc()"}
+              ]
+            }
+          }
         }
-}
-{"menu": {
-    "id": "file",
-    "value": "File",
-    "popup": {
-      "menuitem": [
-        {"value": "New", "onclick": "CreateNewDoc()"},
-        {"value": "Open", "onclick": "OpenDoc()"},
-        {"value": "Close", "onclick": "CloseDoc()"}
-      ]
     }
-  }}
+
+
   The same text expressed as XML:
   
   <menu id="file" value="File">

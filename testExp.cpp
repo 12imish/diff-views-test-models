@@ -1,21 +1,16 @@
-// C++ program to demonstrate the 
-// use of rand() to get value 
-// in a range of 0 to N-1 
+   
+// C++ program to demonstrate 
+//  the use of rand() 
 #include <cstdlib> 
 #include <iostream> 
 using namespace std; 
   
 int main() 
 { 
-    int N = 100; 
-    // This program will create some sequence of random 
-    // numbers on every program run within range 0 to N-1 
+    // This program will create some sequence of 
+    // random numbers on every program run 
     for (int i = 0; i < 5; i++) 
-        cout << rand() % N << " "; 
+        cout << rand() << " "; 
   
     return 0; 
-} 
-  
-// dsfjdhfk
-// dxnfkjdhfkjdhj
-// xcbnnmxbv 
+}
