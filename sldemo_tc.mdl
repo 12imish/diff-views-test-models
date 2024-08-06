@@ -67,8 +67,8 @@ applications, minimizing ROM usage at the cost of some additional
 computation for the full polynomial representation.  
 </dc:description>
   <cp:lastModifiedBy>neham</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-07-23T09:50:35Z</dcterms:modified>
-  <cp:revision>11.0</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-07-25T08:32:51Z</dcterms:modified>
+  <cp:revision>11.1</cp:revision>
   <cp:version>R2024a</cp:version>
 </cp:coreProperties>
 
@@ -134,13 +134,13 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInformation Version="1.0">
   <Model>
-    <P Name="ModelUUID">05daa42e-f3cc-4f22-944a-0ced630b36cb</P>
+    <P Name="ModelUUID">a7d86791-80b6-4d89-877f-136de60c8350</P>
     <P Name="StartFcn">set_param(&apos;sldemo_tc/Scope&apos;,&apos;Open&apos;,&apos;on&apos;)</P>
     <P Name="LastSavedArchitecture">glnxa64</P>
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:11.0&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:11.1&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -2720,10 +2720,12 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_37.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_7.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[306, 45, 1158, 839]</P>
+  <P Name="Location">[412, 364, 2588, 1701]</P>
+  <P Name="ZoomFactor">238</P>
   <Block BlockType="Inport" Name="E_tc_Volts" SID="8">
     <P Name="Position">[50, 63, 80, 77]</P>
     <P Name="ZOrder">-1</P>
+    <P Name="Port">2</P>
     <P Name="Unit">V</P>
   </Block>
   <Block BlockType="TransferFcn" Name="Anti-aliasing filter" SID="9">
@@ -2732,7 +2734,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_7.xml
     <P Name="Position">[100, 210, 615, 260]</P>
     <P Name="ZOrder">-2</P>
     <P Name="AttributesFormatString">%&lt;Description&gt;</P>
-    <P Name="Numerator">8.371694703680943e+005</P>
+    <P Name="Numerator">18.371694703680943e+005</P>
     <P Name="Denominator">[ 1, 1.884955592153875e+002, 1.776528792196083e+004, 8.371694703680943e+005 ]</P>
   </Block>
   <Block BlockType="ZeroOrderHold" Name="Clocked&#xA;Sample and Hold" SID="10">
@@ -2746,14 +2748,18 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_7.xml
     <P Name="Position">[375, 400, 435, 450]</P>
     <P Name="ZOrder">-4</P>
     <P Name="AttributesFormatString">(settings: %&lt;NumberOfConverterBits&gt;-bit converter\nVmin: %&lt;Vmin&gt;, Vmax: %&lt;Vmax&gt;)</P>
-    <P Name="LibraryVersion">1.66</P>
+    <P Name="LibraryVersion">13.0</P>
     <P Name="SourceBlock">simulink_extras/Additional
 Discrete/Idealized ADC quantizer</P>
     <P Name="SourceType">IdealADC</P>
-    <P Name="SourceProductName">Simulink</P>
     <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
       <P Name="ContentPreviewEnabled">off</P>
-      <P Name="NumberOfConverterBits">12</P>
+      <P Name="NumberOfConverterBits">20</P>
       <P Name="Vmin">0</P>
       <P Name="Vmax">5</P>
       <P Name="OutputDataType">uint16</P>
@@ -2769,11 +2775,12 @@ Discrete/Idealized ADC quantizer</P>
   <Block BlockType="Gain" Name="analog scaling gain for &#xA;0-5 Volts full scale range&#xA;(ignore amplifier dynamics)" SID="13">
     <P Name="Position">[370, 38, 540, 102]</P>
     <P Name="ZOrder">-6</P>
-    <P Name="Gain">5/(0.018661+0.000236)</P>
+    <P Name="Gain">10/(0.018661+0.000236)</P>
   </Block>
   <Block BlockType="Outport" Name="bits" SID="14">
     <P Name="Position">[660, 418, 690, 432]</P>
     <P Name="ZOrder">-7</P>
+    <P Name="Port">2</P>
     <P Name="Unit">count</P>
     <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
   </Block>
@@ -2826,8 +2833,9 @@ an in-range error of ~0.25 degC.</P>
 __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[58, 135, 910, 865]</P>
+  <P Name="Location">[412, 364, 2588, 1701]</P>
   <P Name="Open">on</P>
+  <P Name="ZoomFactor">202</P>
   <P Name="ReportName">simulink-default.rpt</P>
   <P Name="SIDHighWatermark">50</P>
   <Block BlockType="SubSystem" Name="1 Type S&#xA;Thermocouple&#xA;model" SID="1">
@@ -2843,11 +2851,11 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <System Ref="system_1"/>
   </Block>
   <Block BlockType="SubSystem" Name="2 ADC &#xA;input and hardware&#xA;model" SID="7">
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[380, 144, 475, 216]</P>
+    <PortCounts in="2" out="2"/>
+    <P Name="Position">[380, 146, 475, 219]</P>
     <P Name="ZOrder">-2</P>
     <PortProperties>
-      <Port Type="out" Index="1">
+      <Port Type="out" Index="2">
         <P Name="Name">bits</P>
       </Port>
     </PortProperties>
@@ -2904,7 +2912,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <Block BlockType="Bias" Name="bias" SID="31">
     <P Name="Position">[110, 170, 150, 190]</P>
     <P Name="ZOrder">-8</P>
-    <P Name="Bias">100</P>
+    <P Name="Bias">200</P>
     <P Name="SaturateOnIntegerOverflow">off</P>
     <PortProperties>
       <Port Type="out" Index="1">
@@ -2918,7 +2926,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Block>
   <Block BlockType="SubSystem" Name="z: jump to ADC example" SID="33">
     <PortCounts/>
-    <P Name="Position">[362, 458, 443, 499]</P>
+    <P Name="Position">[342, 383, 423, 424]</P>
     <P Name="ZOrder">-10</P>
     <P Name="BackgroundColor">lightBlue</P>
     <P Name="ShowName">off</P>
@@ -2932,7 +2940,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Block>
   <Block BlockType="SubSystem" Name="z: jump to prebuilt models" SID="35">
     <PortCounts/>
-    <P Name="Position">[132, 463, 213, 504]</P>
+    <P Name="Position">[167, 403, 248, 444]</P>
     <P Name="ZOrder">-11</P>
     <P Name="BackgroundColor">lightBlue</P>
     <P Name="ShowName">off</P>
@@ -2946,7 +2954,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Block>
   <Block BlockType="SubSystem" Name="z: jump to table data file" SID="37">
     <PortCounts/>
-    <P Name="Position">[597, 458, 678, 499]</P>
+    <P Name="Position">[517, 403, 598, 444]</P>
     <P Name="ZOrder">-12</P>
     <P Name="BackgroundColor">lightBlue</P>
     <P Name="ShowName">off</P>
@@ -2974,7 +2982,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="Name">bits</P>
     <P Name="ZOrder">3</P>
     <P Name="Labels">[0, 0]</P>
-    <P Name="Src">7#out:1</P>
+    <P Name="Src">7#out:2</P>
+    <P Name="Points">[18, 0; 0, -20]</P>
     <P Name="Dst">16#in:1</P>
   </Line>
   <Line>
@@ -3016,69 +3025,9 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <Line>
     <P Name="ZOrder">19</P>
     <P Name="Src">50#out:1</P>
-    <P Name="Dst">7#in:1</P>
+    <P Name="Points">[5, 0]</P>
+    <P Name="Dst">7#in:2</P>
   </Line>
-  <Annotation SID="39">
-    <P Name="Name">Temperature measurement system
-A chain of components from 
-physical phenomenon to software values </P>
-    <P Name="Position">[251, 4, 570, 63]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="ZOrder">-1</P>
-    <P Name="FontName">Arial</P>
-    <P Name="FontSize">16</P>
-    <P Name="FontWeight">bold</P>
-  </Annotation>
-  <Annotation SID="40">
-    <P Name="Name">1) The thermocouple model has  
-a polynomial for a Type S thermo-
-couple using data from NIST 
-Standard Database 60 as well 
-as a simple model of the probe
-and bead time constant.</P>
-    <P Name="Position">[51, 301, 245, 387]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="HorizontalAlignment">left</P>
-    <P Name="ForegroundColor">blue</P>
-    <P Name="ZOrder">-2</P>
-    <P Name="FontName">Arial</P>
-    <P Name="FontSize">12</P>
-    <P Name="FontWeight">bold</P>
-  </Annotation>
-  <Annotation SID="41">
-    <P Name="Name">2) The analog to digital converter 
-(ADC) subsystemincludes analog 
-scaling and filtering, plus a 
-sampled data quantizer.  
-Conversion time is not modeled 
-as it is typically ~2 orders of 
-magnitude smaller in time scale 
-compared to the rest of the 
-simulation.</P>
-    <P Name="Position">[296, 299, 491, 427]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="HorizontalAlignment">left</P>
-    <P Name="ForegroundColor">blue</P>
-    <P Name="ZOrder">-3</P>
-    <P Name="FontName">Arial</P>
-    <P Name="FontSize">12</P>
-    <P Name="FontWeight">bold</P>
-  </Annotation>
-  <Annotation SID="42">
-    <P Name="Name">3) Two conversion techniques 
-are used  in the software
-specification to show some 
-of the options available for 
-modeling nonlinear behavior.</P>
-    <P Name="Position">[541, 304, 717, 376]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="HorizontalAlignment">left</P>
-    <P Name="ForegroundColor">blue</P>
-    <P Name="ZOrder">-4</P>
-    <P Name="FontName">Arial</P>
-    <P Name="FontSize">12</P>
-    <P Name="FontWeight">bold</P>
-  </Annotation>
   <Annotation SID="43">
     <P Name="Name">Continuous
 time</P>
@@ -3120,12 +3069,6 @@ each subsystem:</P>
     <P Name="FontSize">16</P>
     <P Name="FontWeight">bold</P>
   </Annotation>
-  <Annotation SID="47">
-    <P Name="Name">Copyright 1990-2015 The MathWorks, Inc.</P>
-    <P Name="Position">[314, 521, 503, 536]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="ZOrder">-9</P>
-  </Annotation>
 </System>
 
 __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
@@ -3134,7 +3077,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
   <Object PropName="BdWindowsInfo" ObjectID="1" ClassName="Simulink.BDWindowsInfo">
     <Object PropName="WindowsInfo" ObjectID="2" ClassName="Simulink.WindowInfo">
       <P Name="IsActive" Class="logical">1</P>
-      <P Name="Location" Class="double">[58.0, 135.0, 852.0, 730.0]</P>
+      <P Name="Location" Class="double">[412.0, 364.0, 2176.0, 1337.0]</P>
       <Object PropName="ModelBrowserInfo" ObjectID="3" ClassName="Simulink.ModelBrowserInfo">
         <P Name="Visible" Class="logical">0</P>
         <P Name="DockPosition" Class="char">Left</P>
@@ -3146,30 +3089,29 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Object PropName="ExplorerBarInfo" ObjectID="4" ClassName="Simulink.ExplorerBarInfo">
         <P Name="Visible" Class="logical">1</P>
       </Object>
-      <Object PropName="EditorsInfo" ObjectID="5" ClassName="Simulink.EditorInfo">
-        <P Name="IsActive" Class="logical">1</P>
-        <P Name="IsTabbed" Class="logical">1</P>
-        <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
-        <P Name="LoadSaveID" Class="char">0</P>
-        <P Name="Extents" Class="double">[812.0, 494.0]</P>
-        <P Name="ZoomFactor" Class="double">1.0</P>
-        <P Name="Offset" Class="double">[0.0, -10.880859375]</P>
-        <P Name="SceneRectInView" Class="double">[0.0, -10.880859375, 812.0, 494.0]</P>
-      </Object>
-      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
-        <Object ObjectID="6">
-          <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
-          <P Name="ID" Class="char">Referenced Files</P>
-          <P Name="Visible" Class="logical">0</P>
-          <P Name="CreateCallback" Class="char"/>
-          <P Name="UserData" Class="char">{&quot;filterShowRefModels&quot;:&quot;true&quot;,&quot;filterShowRefSubs&quot;:&quot;true&quot;,&quot;filterShowOnlyDirtyFiles&quot;:&quot;false&quot;}
-</P>
-          <P Name="Floating" Class="logical">0</P>
-          <P Name="DockPosition" Class="char">Left</P>
-          <P Name="Width" Class="int32">640</P>
-          <P Name="Height" Class="int32">480</P>
-          <P Name="Minimized" Class="char">Unset</P>
+      <Array PropName="EditorsInfo" Type="Simulink.EditorInfo" Dimension="1*2">
+        <Object ObjectID="5">
+          <P Name="IsActive" Class="logical">1</P>
+          <P Name="IsTabbed" Class="logical">1</P>
+          <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
+          <P Name="LoadSaveID" Class="char">0</P>
+          <P Name="Extents" Class="double">[2136.0, 1101.0]</P>
+          <P Name="ZoomFactor" Class="double">2.0169172932330826</P>
+          <P Name="Offset" Class="double">[-137.02907517233729, -2.9412861136999027]</P>
+          <P Name="SceneRectInView" Class="double">[-137.02907517233729, -2.9412861136999027, 1059.0419384902145, 545.88257222739981]</P>
         </Object>
+        <Object ObjectID="6">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">7</P>
+          <P Name="Extents" Class="double">[2136.0, 1101.0]</P>
+          <P Name="ZoomFactor" Class="double">2.379157427937916</P>
+          <P Name="Offset" Class="double">[-83.68747815703631, 32.115563839701792]</P>
+          <P Name="SceneRectInView" Class="double">[-83.68747815703631, 32.115563839701792, 897.79683131407262, 462.76887232059642]</P>
+        </Object>
+      </Array>
+      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
         <Object ObjectID="7">
           <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
           <P Name="ID" Class="char">Property Inspector</P>
@@ -3182,12 +3124,25 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
+        <Object ObjectID="8">
+          <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
+          <P Name="ID" Class="char">Referenced Files</P>
+          <P Name="Visible" Class="logical">0</P>
+          <P Name="CreateCallback" Class="char"/>
+          <P Name="UserData" Class="char">{&quot;filterShowRefModels&quot;:&quot;true&quot;,&quot;filterShowRefSubs&quot;:&quot;true&quot;,&quot;filterShowOnlyDirtyFiles&quot;:&quot;false&quot;}
+</P>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Left</P>
+          <P Name="Width" Class="int32">640</P>
+          <P Name="Height" Class="int32">480</P>
+          <P Name="Minimized" Class="char">Unset</P>
+        </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAiQD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAAAAAAAAA/AEAAAAB+/////8AAAAAAP////8AAAJ5AP///wAAA1IAAAIrAAAAAQAAAAIAAAABAAAAAvwAAAABAAAAAgAAAAA=</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAiQD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAAAAAAAAA/AEAAAAB+/////8AAAAAAP////8AAAJ5AP///wAACH4AAASKAAAAAQAAAAIAAAABAAAAAvwAAAABAAAAAgAAAAA=</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
-      <P Name="WindowUuid" Class="char">6639d2d0-4c41-4f93-8a5b-a9060d51c580</P>
+      <P Name="WindowUuid" Class="char">c6c6fddb-6d54-494f-b08f-646cbe7d5a27</P>
     </Object>
-    <P Name="BDUuid" Class="char">64b75008-82bf-462b-85ec-05f496200b54</P>
+    <P Name="BDUuid" Class="char">4bde4792-da2e-4d7d-88d0-b3dbdbb218c3</P>
   </Object>
 </WindowsInfo>
 

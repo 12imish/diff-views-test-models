@@ -43,8 +43,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2024-05-16T09:56:36Z</dcterms:created>
   <dc:creator>neham</dc:creator>
   <cp:lastModifiedBy>neham</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-07-01T11:47:38Z</dcterms:modified>
-  <cp:revision>1.4</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-06-19T07:37:59Z</dcterms:modified>
+  <cp:revision>1.2</cp:revision>
   <cp:version>R2024a</cp:version>
 </cp:coreProperties>
 
@@ -66,11 +66,11 @@ __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version information for MathWorks R2024a Release -->
 <MathWorks_version_info>
-  <version>24.1.0.2653294</version>
+  <version>24.1.0.2645994</version>
   <release>R2024a</release>
   <description>Update 5</description>
-  <date>Jun 24 2024</date>
-  <checksum>1281578929</checksum>
+  <date>Jun 17 2024</date>
+  <checksum>332215222</checksum>
 </MathWorks_version_info>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
@@ -106,12 +106,12 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInformation Version="1.0">
   <Model>
-    <P Name="ModelUUID">6ce56fd8-2eaf-4611-a02f-bc822469fc9d</P>
+    <P Name="ModelUUID">c56b9dc5-4d1f-4fd7-8efb-71673b32aa39</P>
     <P Name="LastSavedArchitecture">glnxa64</P>
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:1.4&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:1.2&gt;</P>
     </ConfigManagerSettings>
     <SimulationSettings>
       <P Name="SimulationMode">normal</P>
@@ -942,7 +942,19 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.xml
   <P Name="IsExportFunctionModel">0</P>
   <P Name="SimulinkSubDomainType">Simulink</P>
   <P Name="NumParameterArguments">0</P>
-  <P Name="NumExternalFileReferences">0</P>
+  <P Name="NumExternalFileReferences">2</P>
+  <ExternalFileReference>
+    <P Name="Reference">radarlib/Backscatter Bicyclist</P>
+    <P Name="Path">$bdroot/Backscatter Bicyclist</P>
+    <P Name="SID">96</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">matrix_library/Submatrix</P>
+    <P Name="Path">$bdroot/Subsystem/Submatrix</P>
+    <P Name="SID">71</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
   <P Name="OrderedModelArguments">1</P>
 </GraphicalInterface>
 
@@ -960,8 +972,8 @@ __MWOPC_PART_BEGIN__ /simulink/hdlParams.xml
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2023a_20220628">
-  <System type="System" uuid="27263bda-dae7-4d34-8c16-51385d258977">
-    <Interface type="Interface" uuid="8dd84bbf-baab-4734-b174-71015e674e63"/>
+  <System type="System" uuid="f5c6f077-96ee-43f6-b639-7d2d4b21afbf">
+    <Interface type="Interface" uuid="a0f0c869-7ed7-46c0-bff9-8bca0b1856fd"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
@@ -1000,8 +1012,8 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleEditor.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_29.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Id="system_39" Target="system_39.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_65" Target="system_65.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_99" Target="system_99.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
@@ -1015,116 +1027,64 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
 __MWOPC_PART_BEGIN__ /simulink/systems/system_29.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[0, 27, 3840, 2135]</P>
-  <P Name="ZoomFactor">168</P>
-  <Block BlockType="Inport" Name="out" SID="30">
-    <P Name="Position">[-540, -305, -435, -255]</P>
-    <P Name="ZOrder">230</P>
-  </Block>
-  <Block BlockType="Inport" Name="out2Modified" SID="62">
-    <P Name="Position">[-540, -430, -435, -380]</P>
-    <P Name="ZOrder">266</P>
-    <P Name="Port">2</P>
-  </Block>
-  <Block BlockType="Constant" Name="Constant2Modified" SID="63">
-    <P Name="Position">[-605, 70, -575, 100]</P>
-    <P Name="ZOrder">269</P>
-    <P Name="Value">11</P>
+  <P Name="Location">[0, 37, 1920, 1171]</P>
+  <Block BlockType="SubSystem" Name="Enabled and&#xA;Triggered Subsystem" SID="99">
+    <PortCounts in="1" out="1" enable="1" trigger="1"/>
+    <P Name="Position">[-710, -281, -610, -239]</P>
+    <P Name="ZOrder">369</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_99"/>
   </Block>
   <Block BlockType="Gain" Name="Gain2Modified" SID="64">
-    <P Name="Position">[-500, -135, -470, -105]</P>
+    <P Name="Position">[-380, -280, -350, -250]</P>
     <P Name="ZOrder">270</P>
     <P Name="NameLocation">top</P>
     <P Name="Gain">10</P>
   </Block>
-  <Block BlockType="SubSystem" Name="Subsystem" SID="39">
+  <Block BlockType="Reference" Name="Submatrix" SID="71">
     <PortCounts in="1" out="1"/>
-    <P Name="Position">[-720, -141, -620, -99]</P>
-    <P Name="ZOrder">231</P>
-    <P Name="ContentPreviewEnabled">on</P>
-    <System Ref="system_39"/>
+    <P Name="Position">[-700, -150, -650, -110]</P>
+    <P Name="ZOrder">368</P>
+    <P Name="LibrarySourceBlock">simulink/Matrix
+Operations/Submatrix</P>
+    <P Name="LibraryVersion">8.7</P>
+    <P Name="SourceBlock">matrix_library/Submatrix</P>
+    <P Name="SourceType">Submatrix</P>
+    <InstanceData>
+      <P Name="MultithreadedSim">auto</P>
+      <P Name="RowSpan">Range of rows</P>
+      <P Name="RowStartMode">First</P>
+      <P Name="RowStartIndex">1</P>
+      <P Name="RowEndMode">Last</P>
+      <P Name="RowEndIndex">1</P>
+      <P Name="ColSpan">Range of columns</P>
+      <P Name="ColStartMode">First</P>
+      <P Name="ColStartIndex">1</P>
+      <P Name="ColEndMode">Last</P>
+      <P Name="ColEndIndex">1</P>
+    </InstanceData>
   </Block>
   <Block BlockType="SubSystem" Name="Subsystem2Modified" SID="65">
     <PortCounts in="2" out="3"/>
-    <P Name="Position">[-485, 69, -385, 121]</P>
+    <P Name="Position">[-525, -146, -425, -94]</P>
     <P Name="ZOrder">267</P>
     <P Name="ContentPreviewEnabled">on</P>
     <System Ref="system_65"/>
   </Block>
-  <Block BlockType="Sum" Name="add2Modified" SID="68">
-    <PortCounts in="4" out="1"/>
-    <P Name="Position">[-150, -156, -40, -99]</P>
-    <P Name="ZOrder">265</P>
+  <Block BlockType="Sum" Name="Subtract" SID="72">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[-510, -283, -480, -252]</P>
+    <P Name="ZOrder">365</P>
     <P Name="IconShape">rectangular</P>
-    <P Name="Inputs">++++</P>
+    <P Name="Inputs">+-</P>
   </Block>
-  <Block BlockType="Outport" Name="OUT2Modified" SID="69">
-    <P Name="Position">[-170, 78, -110, 112]</P>
-    <P Name="ZOrder">268</P>
+  <Block BlockType="Sum" Name="add" SID="48">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[-650, -33, -540, 23]</P>
+    <P Name="ZOrder">229</P>
+    <P Name="IconShape">rectangular</P>
   </Block>
-  <Line>
-    <P Name="ZOrder">1</P>
-    <P Name="Src">63#out:1</P>
-    <P Name="Dst">65#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">2</P>
-    <P Name="Src">64#out:1</P>
-    <P Name="Dst">68#in:3</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">3</P>
-    <P Name="Src">30#out:1</P>
-    <P Name="Points">[137, 0; 0, 145]</P>
-    <P Name="Dst">68#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">4</P>
-    <P Name="Src">62#out:1</P>
-    <P Name="Points">[208, 0; 0, 255]</P>
-    <P Name="Dst">68#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">65#out:1</P>
-    <P Name="Points">[112, 0; 0, -185]</P>
-    <P Name="Dst">68#in:4</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">6</P>
-    <P Name="Src">65#out:2</P>
-    <P Name="Dst">69#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">7</P>
-    <P Name="Src">39#out:1</P>
-    <P Name="Dst">64#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">8</P>
-    <P Name="Src">65#out:3</P>
-    <P Name="Points">[19, 0; 0, 48; -148, 0; 0, -48]</P>
-    <P Name="Dst">65#in:2</P>
-  </Line>
-</System>
-
-__MWOPC_PART_BEGIN__ /simulink/systems/system_39.xml
-<?xml version="1.0" encoding="utf-8"?>
-<System>
-  <P Name="Location">[433, 403, 931, 703]</P>
-  <Block BlockType="Inport" Name="In1" SID="40">
-    <P Name="Position">[110, 103, 140, 117]</P>
-    <P Name="ZOrder">-1</P>
-  </Block>
-  <Block BlockType="Outport" Name="Out1" SID="41">
-    <P Name="Position">[360, 103, 390, 117]</P>
-    <P Name="ZOrder">-2</P>
-  </Block>
-  <Line>
-    <P Name="ZOrder">1</P>
-    <P Name="Src">40#out:1</P>
-    <P Name="Dst">41#in:1</P>
-  </Line>
 </System>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/system_65.xml
@@ -1188,14 +1148,45 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_84.xml
   </Line>
 </System>
 
+__MWOPC_PART_BEGIN__ /simulink/systems/system_99.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[498, 465, 996, 765]</P>
+  <Block BlockType="Inport" Name="In1" SID="100">
+    <P Name="Position">[110, 103, 140, 117]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="EnablePort" Name="Enable" SID="101">
+    <PortCounts/>
+    <P Name="Position">[270, 20, 290, 40]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Block BlockType="TriggerPort" Name="Trigger" SID="102">
+    <PortCounts/>
+    <P Name="Position">[190, 20, 210, 40]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="VariantControl">(inherit)</P>
+    <P Name="StatesWhenEnabling">held</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="103">
+    <P Name="Position">[360, 103, 390, 117]</P>
+    <P Name="ZOrder">-4</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">100#out:1</P>
+    <P Name="Dst">103#in:1</P>
+  </Line>
+</System>
+
 __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[0, 27, 3840, 2135]</P>
+  <P Name="Location">[0, 37, 1920, 1171]</P>
   <P Name="Open">on</P>
-  <P Name="ZoomFactor">482</P>
+  <P Name="ZoomFactor">150</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">124</P>
+  <P Name="SIDHighWatermark">104</P>
   <Block BlockType="SubSystem" Name="Added" SID="81">
     <PortCounts in="1" out="1"/>
     <P Name="Position">[495, 174, 595, 216]</P>
@@ -1207,13 +1198,41 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="Position">[245, 403, 320, 437]</P>
     <P Name="ZOrder">376</P>
   </Block>
+  <Block BlockType="Reference" Name="Backscatter Bicyclist" SID="96">
+    <PortCounts in="5" out="4"/>
+    <P Name="Position">[-10, 388, 140, 442]</P>
+    <P Name="ZOrder">375</P>
+    <P Name="LibraryVersion">8.15</P>
+    <P Name="SourceBlock">radarlib/Backscatter Bicyclist</P>
+    <P Name="SourceType">Backscatter Bicyclist</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="NumWheelSpokes">20</P>
+      <P Name="GearTransmissionRatio">1.5</P>
+      <P Name="OperatingFrequency">77e9</P>
+      <P Name="InitialPosition">[0;0;0]</P>
+      <P Name="InitialHeading">0</P>
+      <P Name="InitialSpeed">4</P>
+      <P Name="PropagationSpeed">physconst(&apos;lightspeed&apos;)</P>
+      <P Name="RCSPatternSource">Auto</P>
+      <P Name="AzimuthAngles">-180:180</P>
+      <P Name="ElevationAngles">0</P>
+      <P Name="RCSPattern">backscatterBicyclist.defaultRCSPattern</P>
+      <P Name="SimulateUsing">Interpreted execution</P>
+    </InstanceData>
+  </Block>
   <Block BlockType="ObserverReference" Name="Observer" SID="98">
-    <P Name="Position">[425, 389, 510, 441]</P>
+    <P Name="Position">[425, 399, 510, 451]</P>
     <P Name="ZOrder">377</P>
   </Block>
   <Block BlockType="SubSystem" Name="Subsystem" SID="29">
-    <PortCounts in="2" out="1"/>
-    <P Name="Position">[-10, 163, 380, 372]</P>
+    <PortCounts/>
+    <P Name="Position">[-10, 165, 380, 375]</P>
     <P Name="ZOrder">2</P>
     <P Name="ContentPreviewEnabled">on</P>
     <System Ref="system_29"/>
@@ -1231,7 +1250,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Points">[380, 215; 37, 0; 0, -20]</P>
+    <P Name="Points">[380, 195]</P>
     <P Name="Dst">81#in:1</P>
   </Line>
   <Line>
@@ -1242,13 +1261,12 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   </Line>
   <Line>
     <P Name="ZOrder">5</P>
-    <P Name="Src">29#out:1</P>
-    <P Name="Points">[63, 0; 0, -5]</P>
+    <P Name="Points">[380, 215; 58, 0; 0, 50]</P>
     <P Name="Dst">95#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">6</P>
-    <P Name="Points">[380, 335; 238, 0; 0, -40]</P>
+    <P Name="Points">[380, 270; 29, 0; 0, 25]</P>
     <P Name="Dst">84#in:2</P>
   </Line>
 </System>
@@ -1259,7 +1277,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
   <Object PropName="BdWindowsInfo" ObjectID="1" ClassName="Simulink.BDWindowsInfo">
     <Object PropName="WindowsInfo" ObjectID="2" ClassName="Simulink.WindowInfo">
       <P Name="IsActive" Class="logical">1</P>
-      <P Name="Location" Class="double">[0.0, 27.0, 3840.0, 2108.0]</P>
+      <P Name="Location" Class="double">[0.0, 37.0, 1920.0, 1134.0]</P>
       <Object PropName="ModelBrowserInfo" ObjectID="3" ClassName="Simulink.ModelBrowserInfo">
         <P Name="Visible" Class="logical">1</P>
         <P Name="DockPosition" Class="char">Left</P>
@@ -1277,20 +1295,20 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
-          <P Name="Extents" Class="double">[3740.0, 1874.0]</P>
-          <P Name="ZoomFactor" Class="double">4.8207533985423643</P>
-          <P Name="Offset" Class="double">[-17.906172625512397, 115.63204077534485]</P>
-          <P Name="SceneRectInView" Class="double">[-17.906172625512397, 115.63204077534485, 775.81234525102479, 388.7359184493103]</P>
+          <P Name="Extents" Class="double">[1464.0, 892.0]</P>
+          <P Name="ZoomFactor" Class="double">1.5</P>
+          <P Name="Offset" Class="double">[-152.66460442444679, -20.522872140982429]</P>
+          <P Name="SceneRectInView" Class="double">[-152.66460442444679, -20.522872140982429, 976.0, 594.66666666666663]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
           <P Name="LoadSaveID" Class="char">29</P>
-          <P Name="Extents" Class="double">[3740.0, 1874.0]</P>
-          <P Name="ZoomFactor" Class="double">1.6807174887892378</P>
-          <P Name="Offset" Class="double">[-1235.8286499382141, -564.79166666666663]</P>
-          <P Name="SceneRectInView" Class="double">[-1235.8286499382141, -564.79166666666663, 2225.240128068303, 1115.0]</P>
+          <P Name="Extents" Class="double">[1464.0, 892.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-1201.1443130118291, -503.26333030027291]</P>
+          <P Name="SceneRectInView" Class="double">[-1201.1443130118291, -503.26333030027291, 1464.0, 892.0]</P>
         </Object>
         <Object ObjectID="7">
           <P Name="IsActive" Class="logical">0</P>
@@ -1303,8 +1321,32 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="SceneRectInView" Class="double">[0.0, 0.0, 892.0, 530.0]</P>
         </Object>
       </Array>
-      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*3">
+      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*4">
         <Object ObjectID="8">
+          <P Name="Type" Class="char">LibraryBrowser2 LibraryBrowserStudioComponent</P>
+          <P Name="ID" Class="char">mSubsystemBlock</P>
+          <P Name="Visible" Class="logical">1</P>
+          <P Name="CreateCallback" Class="char"/>
+          <P Name="UserData" Class="char"/>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Left</P>
+          <P Name="Width" Class="int32">330</P>
+          <P Name="Height" Class="int32">925</P>
+          <P Name="Minimized" Class="char">Unset</P>
+        </Object>
+        <Object ObjectID="9">
+          <P Name="Type" Class="char">GLUE2:SpreadSheet</P>
+          <P Name="ID" Class="char">ModelData</P>
+          <P Name="Visible" Class="logical">0</P>
+          <P Name="CreateCallback" Class="char">DataView.createSpreadSheetComponent</P>
+          <P Name="UserData" Class="char"/>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Bottom</P>
+          <P Name="Width" Class="int32">1840</P>
+          <P Name="Height" Class="int32">235</P>
+          <P Name="Minimized" Class="char">Unset</P>
+        </Object>
+        <Object ObjectID="10">
           <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
           <P Name="ID" Class="char">Property Inspector</P>
           <P Name="Visible" Class="logical">1</P>
@@ -1316,7 +1358,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">On</P>
         </Object>
-        <Object ObjectID="9">
+        <Object ObjectID="11">
           <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
           <P Name="ID" Class="char">Referenced Files</P>
           <P Name="Visible" Class="logical">0</P>
@@ -1329,24 +1371,12 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
-        <Object ObjectID="10">
-          <P Name="Type" Class="char">GLUE2:SpreadSheet</P>
-          <P Name="ID" Class="char">ModelData</P>
-          <P Name="Visible" Class="logical">0</P>
-          <P Name="CreateCallback" Class="char">DataView.createSpreadSheetComponent</P>
-          <P Name="UserData" Class="char"/>
-          <P Name="Floating" Class="logical">0</P>
-          <P Name="DockPosition" Class="char">Bottom</P>
-          <P Name="Width" Class="int32">640</P>
-          <P Name="Height" Class="int32">480</P>
-          <P Name="Minimized" Class="char">Unset</P>
-        </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAFOAAADufwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAeQAAA7kAAABiAP////wAAAB5AAADuQAAAAAA////+gAAAAECAAAAAvsAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAiQD////7AAAAegBMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAMgAgAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgBTAHQAdQBkAGkAbwBDAG8AbQBwAG8AbgBlAG4AdAAvAG0AUwB1AGIAcwB5AHMAdABlAG0AQgBsAG8AYwBrAQAAAAD/////AAAAAAAAAAAAAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAABzQAAAEH/AEAAAAB/AAAACUAAAc0AAAAAAD////6/////wEAAAAC+wAAADYARwBMAFUARQAyADoAUwBwAHIAZQBhAGQAUwBoAGUAZQB0AC8ATQBvAGQAZQBsAEQAYQB0AGEAAAAAAP////8AAAEOAP////v/////AAAAAAD/////AAACeQD///8AAA7CAAAHjwAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiAGwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA==</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAFOAAADufwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAeQAAA7kAAACAAAf///wAAAB5AAADuQAAAO0A////+gAAAAECAAAAAvsAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAsAD////7AAAAegBMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAMgAgAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgBTAHQAdQBkAGkAbwBDAG8AbQBwAG8AbgBlAG4AdAAvAG0AUwB1AGIAcwB5AHMAdABlAG0AQgBsAG8AYwBrAQAAAAD/////AAAA7QD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAABzQAAAEH/AEAAAAB/AAAACUAAAc0AAAAAAD////6/////wEAAAAC+/////8AAAAAAP////8AAAJ5AP////sAAAA2AEcATABVAEUAMgA6AFMAcAByAGUAYQBkAFMAaABlAGUAdAAvAE0AbwBkAGUAbABEAGEAdABhAAAAAAD/////AAABUAD///8AAAXeAAADuQAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiAGwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA==</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">3c5fb59d-0775-49d9-86b7-082471d35e44</P>
     </Object>
-    <P Name="BDUuid" Class="char">f69e7878-3f0e-4793-8c60-daa64bad5a40</P>
+    <P Name="BDUuid" Class="char">f10d8431-3c37-434b-948b-32d07e2debf9</P>
   </Object>
 </WindowsInfo>
 
