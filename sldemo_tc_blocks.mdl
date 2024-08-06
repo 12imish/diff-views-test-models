@@ -48,8 +48,8 @@ Full-Range 2 degrees Celsius Interpolated Thermocouple Tables created using
 one ITS-90 Interpolating Polynomial and one inverse polynomial per junction type.
 </dc:description>
   <cp:lastModifiedBy>neham</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-07-23T09:57:01Z</dcterms:modified>
-  <cp:revision>11.0</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-07-25T08:25:58Z</dcterms:modified>
+  <cp:revision>11.1</cp:revision>
   <cp:version>R2024a</cp:version>
 </cp:coreProperties>
 
@@ -115,12 +115,12 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInformation Version="1.0">
   <Model>
-    <P Name="ModelUUID">a6fc0c7c-34f5-453d-afe1-c218b3134216</P>
+    <P Name="ModelUUID">751ae3fc-ce62-422c-9473-3fdd13cc5c06</P>
     <P Name="LastSavedArchitecture">glnxa64</P>
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:11.0&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:11.1&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -955,70 +955,6 @@ __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2023a_20220628">
   <System type="System" uuid="7330aebf-98fe-4d6b-8895-9b9cccb8f675">
-    <Parameter type="Parameter" uuid="60d22668-0cf9-4de8-987d-05bd3bc6a32e">
-      <Identifier>TypeB_Volts</Identifier>
-      <Name>TypeB_Volts</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="77461d09-fd08-49ef-a4a9-c701d79a0795">
-      <Identifier>TypeB_degC</Identifier>
-      <Name>TypeB_degC</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="96a98fc1-cb51-4657-8739-1f65bbe4cb37">
-      <Identifier>TypeE_Volts</Identifier>
-      <Name>TypeE_Volts</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="75214ee1-f4c3-4a22-9a91-1fd576b6de40">
-      <Identifier>TypeE_degC</Identifier>
-      <Name>TypeE_degC</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="3f3a8344-318c-430c-90df-bc606a81e23a">
-      <Identifier>TypeJ_Volts</Identifier>
-      <Name>TypeJ_Volts</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="7d15758c-9059-4bd7-96ea-bc8f539695e9">
-      <Identifier>TypeJ_degC</Identifier>
-      <Name>TypeJ_degC</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="769f80c3-63c6-413a-9d1e-8aa479f6e134">
-      <Identifier>TypeK_Volts</Identifier>
-      <Name>TypeK_Volts</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="2e28cab5-3ed3-4866-8d99-59aac90e7206">
-      <Identifier>TypeK_degC</Identifier>
-      <Name>TypeK_degC</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="eaab17cd-bc48-4a93-942f-cd32f0a926a0">
-      <Identifier>TypeN_Volts</Identifier>
-      <Name>TypeN_Volts</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="a899c59d-2e9e-4bdc-b71a-cc158f88cc5f">
-      <Identifier>TypeN_degC</Identifier>
-      <Name>TypeN_degC</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="7cd1e2fd-22e5-491b-8436-2463fa704d5b">
-      <Identifier>TypeR_Volts</Identifier>
-      <Name>TypeR_Volts</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="f01bbe54-d49c-453f-9097-08893166b7d5">
-      <Identifier>TypeR_degC</Identifier>
-      <Name>TypeR_degC</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="d6d408d4-4cb6-40af-814b-3678654d6c60">
-      <Identifier>TypeS_Volts</Identifier>
-      <Name>TypeS_Volts</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="69fa98ba-4fed-4ee2-9e0d-1902f0bd484e">
-      <Identifier>TypeS_degC</Identifier>
-      <Name>TypeS_degC</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="16b2459e-7ff5-4b62-801d-b45c407943f0">
-      <Identifier>TypeT_Volts</Identifier>
-      <Name>TypeT_Volts</Name>
-    </Parameter>
-    <Parameter type="Parameter" uuid="2e9afbb5-d247-49fd-ab13-c8cc0024881a">
-      <Identifier>TypeT_degC</Identifier>
-      <Name>TypeT_degC</Name>
-    </Parameter>
     <Interface type="Interface" uuid="9a3791bc-dd8d-49d4-8212-fd5f00d340e0"/>
   </System>
 </MF0>
@@ -1079,10 +1015,12 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_2.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[520, 522, 925, 1068]</P>
+  <P Name="Location">[1333, 377, 3197, 1788]</P>
+  <P Name="ZoomFactor">336</P>
   <Block BlockType="Inport" Name="u1" SID="3">
     <P Name="Position">[25, 98, 55, 112]</P>
     <P Name="ZOrder">-1</P>
+    <P Name="Port">2</P>
   </Block>
   <Block BlockType="Switch" Name="Switch" SID="4">
     <P Name="Position">[215, 77, 250, 243]</P>
@@ -1120,6 +1058,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2.xml
     <P Name="Position">[295, 153, 325, 167]</P>
     <P Name="ZOrder">-5</P>
     <P Name="ShowName">off</P>
+    <P Name="Port">2</P>
     <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
   </Block>
   <Line>
@@ -1164,8 +1103,9 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[58, 45, 854, 747]</P>
+  <P Name="Location">[1333, 377, 3197, 1788]</P>
   <P Name="Open">on</P>
+  <P Name="ZoomFactor">215</P>
   <P Name="ReportName">simulink-default.rpt</P>
   <P Name="SIDHighWatermark">25</P>
   <Block BlockType="SubSystem" Name="More Info" SID="1">
@@ -1181,8 +1121,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <System Ref="system_1"/>
   </Block>
   <Block BlockType="SubSystem" Name="Thermocouple&#xA;conditioning 1" SID="2">
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[30, 204, 85, 256]</P>
+    <PortCounts in="2" out="2"/>
+    <P Name="Position">[30, 206, 85, 259]</P>
     <P Name="ZOrder">-2</P>
     <P Name="AttributesFormatString">TypeB_Volts to\nTypeB_degC</P>
     <Mask>
@@ -1216,57 +1156,9 @@ plot([0.95 0.7515 0.554 0.4535 0.375 0.335 0.325],[0.7 0.6 0.5 0.4 0.3 0.2 0.05]
     <P Name="Table">TypeJ_degC</P>
     <P Name="DiagnosticForOutOfRangeInput">Warning</P>
   </Block>
-  <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;conditioning 4" SID="10">
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[300, 204, 355, 256]</P>
-    <P Name="ZOrder">-5</P>
-    <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
-    <P Name="InputPortMap">u0</P>
-    <P Name="NumberOfTableDimensions">1</P>
-    <P Name="BreakpointsForDimension1">TypeK_Volts</P>
-    <P Name="BeginIndexSearchUsingPreviousIndexResult">on</P>
-    <P Name="Table">TypeK_degC</P>
-    <P Name="DiagnosticForOutOfRangeInput">Warning</P>
-  </Block>
-  <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;conditioning 5" SID="11">
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[390, 204, 445, 256]</P>
-    <P Name="ZOrder">-6</P>
-    <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
-    <P Name="InputPortMap">u0</P>
-    <P Name="NumberOfTableDimensions">1</P>
-    <P Name="BreakpointsForDimension1">TypeN_Volts</P>
-    <P Name="BeginIndexSearchUsingPreviousIndexResult">on</P>
-    <P Name="Table">TypeN_degC</P>
-    <P Name="DiagnosticForOutOfRangeInput">Warning</P>
-  </Block>
-  <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;conditioning 6" SID="12">
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[480, 204, 535, 256]</P>
-    <P Name="ZOrder">-7</P>
-    <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
-    <P Name="InputPortMap">u0</P>
-    <P Name="NumberOfTableDimensions">1</P>
-    <P Name="BreakpointsForDimension1">TypeR_Volts</P>
-    <P Name="BeginIndexSearchUsingPreviousIndexResult">on</P>
-    <P Name="Table">TypeR_degC</P>
-    <P Name="DiagnosticForOutOfRangeInput">Warning</P>
-  </Block>
-  <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;conditioning 7" SID="13">
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[565, 204, 620, 256]</P>
-    <P Name="ZOrder">-8</P>
-    <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
-    <P Name="InputPortMap">u0</P>
-    <P Name="NumberOfTableDimensions">1</P>
-    <P Name="BreakpointsForDimension1">TypeS_Volts</P>
-    <P Name="BeginIndexSearchUsingPreviousIndexResult">on</P>
-    <P Name="Table">TypeS_degC</P>
-    <P Name="DiagnosticForOutOfRangeInput">Warning</P>
-  </Block>
   <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;conditioning 8" SID="14">
     <PortCounts in="1" out="1"/>
-    <P Name="Position">[655, 204, 710, 256]</P>
+    <P Name="Position">[665, 244, 720, 296]</P>
     <P Name="ZOrder">-9</P>
     <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
     <P Name="InputPortMap">u0</P>
@@ -1301,12 +1193,11 @@ plot([0.95 0.7515 0.554 0.4535 0.375 0.335 0.325],[0.7 0.6 0.5 0.4 0.3 0.2 0.05]
     <P Name="DiagnosticForOutOfRangeInput">Warning</P>
   </Block>
   <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;model 3" SID="17">
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[210, 79, 265, 131]</P>
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[210, 73, 265, 137]</P>
     <P Name="ZOrder">-12</P>
     <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
-    <P Name="InputPortMap">u0</P>
-    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="InputPortMap">u0,u1</P>
     <P Name="BreakpointsForDimension1">TypeJ_degC</P>
     <P Name="BeginIndexSearchUsingPreviousIndexResult">on</P>
     <P Name="Table">TypeJ_Volts</P>
@@ -1326,7 +1217,7 @@ plot([0.95 0.7515 0.554 0.4535 0.375 0.335 0.325],[0.7 0.6 0.5 0.4 0.3 0.2 0.05]
   </Block>
   <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;model 5" SID="19">
     <PortCounts in="1" out="1"/>
-    <P Name="Position">[390, 79, 445, 131]</P>
+    <P Name="Position">[390, 204, 445, 256]</P>
     <P Name="ZOrder">-14</P>
     <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
     <P Name="InputPortMap">u0</P>
@@ -1338,7 +1229,7 @@ plot([0.95 0.7515 0.554 0.4535 0.375 0.335 0.325],[0.7 0.6 0.5 0.4 0.3 0.2 0.05]
   </Block>
   <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;model 6" SID="20">
     <PortCounts in="1" out="1"/>
-    <P Name="Position">[480, 79, 535, 131]</P>
+    <P Name="Position">[435, 79, 490, 131]</P>
     <P Name="ZOrder">-15</P>
     <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
     <P Name="InputPortMap">u0</P>
@@ -1348,21 +1239,9 @@ plot([0.95 0.7515 0.554 0.4535 0.375 0.335 0.325],[0.7 0.6 0.5 0.4 0.3 0.2 0.05]
     <P Name="Table">TypeR_Volts</P>
     <P Name="DiagnosticForOutOfRangeInput">Warning</P>
   </Block>
-  <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;model 7" SID="21">
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[565, 79, 620, 131]</P>
-    <P Name="ZOrder">-16</P>
-    <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
-    <P Name="InputPortMap">u0</P>
-    <P Name="NumberOfTableDimensions">1</P>
-    <P Name="BreakpointsForDimension1">TypeS_degC</P>
-    <P Name="BeginIndexSearchUsingPreviousIndexResult">on</P>
-    <P Name="Table">TypeS_Volts</P>
-    <P Name="DiagnosticForOutOfRangeInput">Warning</P>
-  </Block>
   <Block BlockType="Lookup_n-D" Name="Thermocouple&#xA;model 8" SID="22">
     <PortCounts in="1" out="1"/>
-    <P Name="Position">[655, 79, 710, 131]</P>
+    <P Name="Position">[535, 79, 590, 131]</P>
     <P Name="ZOrder">-17</P>
     <P Name="AttributesFormatString">%&lt;bp1&gt; to\n%&lt;tableData&gt;</P>
     <P Name="InputPortMap">u0</P>
@@ -1372,6 +1251,27 @@ plot([0.95 0.7515 0.554 0.4535 0.375 0.335 0.325],[0.7 0.6 0.5 0.4 0.3 0.2 0.05]
     <P Name="Table">TypeT_Volts</P>
     <P Name="DiagnosticForOutOfRangeInput">Warning</P>
   </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">8#out:1</P>
+    <P Name="Dst">9#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">17#out:1</P>
+    <P Name="Dst">18#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">22#out:1</P>
+    <P Name="Points">[51, 0; 0, 165]</P>
+    <P Name="Dst">14#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">9#out:1</P>
+    <P Name="Dst">19#in:1</P>
+  </Line>
   <Annotation SID="23">
     <P Name="Name">Full-Range 2 degrees Celsius Interpolated Thermocouple Tables
 created from ITS-90 Interpolating Polynomials</P>
@@ -1382,25 +1282,6 @@ created from ITS-90 Interpolating Polynomials</P>
     <P Name="FontSize">18</P>
     <P Name="FontWeight">bold</P>
   </Annotation>
-  <Annotation SID="24">
-    <P Name="Name">Note: this model has data in its Model Workspace.
-Browse/Edit the model workspace from the View / Model Explorer menu item.
-
-To use these blocks, load data into the model workspace or base workspace:
-&gt;&gt; load sldemo_tc_blocks_data.mat</P>
-    <P Name="Position">[75, 323, 663, 420]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="ZOrder">-2</P>
-    <P Name="FontName">Arial</P>
-    <P Name="FontSize">16</P>
-    <P Name="FontWeight">bold</P>
-  </Annotation>
-  <Annotation SID="25">
-    <P Name="Name">Copyright 1990-2013 The MathWorks, Inc.</P>
-    <P Name="Position">[274, 431, 463, 446]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="ZOrder">-3</P>
-  </Annotation>
 </System>
 
 __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
@@ -1409,7 +1290,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
   <Object PropName="BdWindowsInfo" ObjectID="1" ClassName="Simulink.BDWindowsInfo">
     <Object PropName="WindowsInfo" ObjectID="2" ClassName="Simulink.WindowInfo">
       <P Name="IsActive" Class="logical">1</P>
-      <P Name="Location" Class="double">[58.0, 45.0, 796.0, 702.0]</P>
+      <P Name="Location" Class="double">[1333.0, 377.0, 1864.0, 1411.0]</P>
       <Object PropName="ModelBrowserInfo" ObjectID="3" ClassName="Simulink.ModelBrowserInfo">
         <P Name="Visible" Class="logical">0</P>
         <P Name="DockPosition" Class="char">Left</P>
@@ -1421,29 +1302,29 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Object PropName="ExplorerBarInfo" ObjectID="4" ClassName="Simulink.ExplorerBarInfo">
         <P Name="Visible" Class="logical">1</P>
       </Object>
-      <Object PropName="EditorsInfo" ObjectID="5" ClassName="Simulink.EditorInfo">
-        <P Name="IsActive" Class="logical">1</P>
-        <P Name="IsTabbed" Class="logical">1</P>
-        <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
-        <P Name="LoadSaveID" Class="char">0</P>
-        <P Name="Extents" Class="double">[756.0, 466.0]</P>
-        <P Name="ZoomFactor" Class="double">1.0</P>
-        <P Name="Offset" Class="double">[0.0, -1.24609375]</P>
-        <P Name="SceneRectInView" Class="double">[0.0, -1.24609375, 756.0, 466.0]</P>
-      </Object>
-      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
-        <Object ObjectID="6">
-          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
-          <P Name="ID" Class="char">Property Inspector</P>
-          <P Name="Visible" Class="logical">0</P>
-          <P Name="CreateCallback" Class="char"/>
-          <P Name="UserData" Class="char"/>
-          <P Name="Floating" Class="logical">0</P>
-          <P Name="DockPosition" Class="char">Right</P>
-          <P Name="Width" Class="int32">640</P>
-          <P Name="Height" Class="int32">480</P>
-          <P Name="Minimized" Class="char">Unset</P>
+      <Array PropName="EditorsInfo" Type="Simulink.EditorInfo" Dimension="1*2">
+        <Object ObjectID="5">
+          <P Name="IsActive" Class="logical">1</P>
+          <P Name="IsTabbed" Class="logical">1</P>
+          <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
+          <P Name="LoadSaveID" Class="char">0</P>
+          <P Name="Extents" Class="double">[1824.0, 961.0]</P>
+          <P Name="ZoomFactor" Class="double">2.1547344110854505</P>
+          <P Name="Offset" Class="double">[-53.394644292604482, 6.5026795284030072]</P>
+          <P Name="SceneRectInView" Class="double">[-53.394644292604482, 6.5026795284030072, 846.508038585209, 445.994640943194]</P>
         </Object>
+        <Object ObjectID="6">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">2</P>
+          <P Name="Extents" Class="double">[1824.0, 961.0]</P>
+          <P Name="ZoomFactor" Class="double">3.3561151079136691</P>
+          <P Name="Offset" Class="double">[-96.742765273311875, 16.828510182207935]</P>
+          <P Name="SceneRectInView" Class="double">[-96.742765273311875, 16.828510182207935, 543.48553054662375, 286.34297963558413]</P>
+        </Object>
+      </Array>
+      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
         <Object ObjectID="7">
           <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
           <P Name="ID" Class="char">Referenced Files</P>
@@ -1457,12 +1338,24 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
+        <Object ObjectID="8">
+          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
+          <P Name="ID" Class="char">Property Inspector</P>
+          <P Name="Visible" Class="logical">0</P>
+          <P Name="CreateCallback" Class="char"/>
+          <P Name="UserData" Class="char"/>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Right</P>
+          <P Name="Width" Class="int32">640</P>
+          <P Name="Height" Class="int32">480</P>
+          <P Name="Minimized" Class="char">Unset</P>
+        </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAiQD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAAAAAAAAA/AEAAAAB+/////8AAAAAAP////8AAAJ5AP///wAAAxoAAAIPAAAAAQAAAAIAAAABAAAAAvwAAAABAAAAAgAAAAA=</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAiQD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAB0YAAADQ/AEAAAAB+/////8BAAAAAAAAB0YAAAJ5AP///wAAB0YAAAP+AAAAAQAAAAIAAAABAAAAAvwAAAABAAAAAgAAAAA=</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
-      <P Name="WindowUuid" Class="char">f0a1640d-7fb6-4c71-90b8-c2a4d2d2d73d</P>
+      <P Name="WindowUuid" Class="char">a8639f24-1c55-4995-8a64-7b6ed0bebb72</P>
     </Object>
-    <P Name="BDUuid" Class="char">c8b6020a-c54d-414c-b589-375389ca472d</P>
+    <P Name="BDUuid" Class="char">49c94fd4-1892-4cfb-8170-2a2d207710a8</P>
   </Object>
 </WindowsInfo>
 

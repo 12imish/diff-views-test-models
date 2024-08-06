@@ -47,8 +47,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
 
 This is a simulation of a nonlinear second order system.</dc:description>
   <cp:lastModifiedBy>The MathWorks, Inc.</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-07-23T09:35:18Z</dcterms:modified>
-  <cp:revision>9.0</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-07-25T08:19:41Z</dcterms:modified>
+  <cp:revision>9.1</cp:revision>
   <cp:version>R2024a</cp:version>
 </cp:coreProperties>
 
@@ -115,12 +115,12 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInformation Version="1.0">
   <Model>
-    <P Name="ModelUUID">84a1e3cd-89cf-4c73-bad6-0625e4946d61</P>
+    <P Name="ModelUUID">213476ad-bb8d-4c40-aafd-a9dcd680567f</P>
     <P Name="LastSavedArchitecture">glnxa64</P>
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">The MathWorks, Inc.</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:9.0&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:9.1&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -938,15 +938,7 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.xml
 <?xml version="1.0" encoding="utf-8"?>
 <GraphicalInterface>
   <P Name="NumRootInports">0</P>
-  <P Name="NumRootOutports">2</P>
-  <Outport Name="Out1">
-    <P Name="BusObject"/>
-    <P Name="BusOutputAsStruct">off</P>
-    <P Name="SignalName">x1</P>
-    <P Name="DisplayName"/>
-    <P Name="UnitExpr">inherit</P>
-    <P Name="OutportClientType">off</P>
-  </Outport>
+  <P Name="NumRootOutports">1</P>
   <Outport Name="Out2">
     <P Name="BusObject"/>
     <P Name="BusOutputAsStruct">off</P>
@@ -996,8 +988,8 @@ __MWOPC_PART_BEGIN__ /simulink/hdlParams.xml
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2023a_20220628">
-  <System type="System" uuid="5fa3887d-7ee4-477b-ae85-b3f93197a8d4">
-    <Interface type="Interface" uuid="aede4c6a-6059-4726-aef1-7d10b0b980ce"/>
+  <System type="System" uuid="84827c8f-4459-4be8-838a-2261a11a70f1">
+    <Interface type="Interface" uuid="796a0a28-d1bb-4582-8f6e-10faa40cb052"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
@@ -1163,21 +1155,19 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/machine.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[58, 135, 1829, 1510]</P>
+  <P Name="Location">[399, 129, 2170, 1504]</P>
   <P Name="Open">on</P>
   <P Name="ZoomFactor">241</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">58</P>
+  <P Name="SIDHighWatermark">59</P>
   <Block BlockType="CustomCallbackButton" Name="Callback Button" SID="54">
     <P Name="Position">[65, 10, 95, 45]</P>
     <P Name="ZOrder">296</P>
     <P Name="ForegroundColor">[0.011765, 0.011765, 0.011765]</P>
+    <P Name="BackgroundColor">[0.956863, 0.956863, 0.956863]</P>
     <P Name="ShowName">off</P>
     <P Name="HideAutomaticName">off</P>
-    <P Name="FontName">Helvetica</P>
     <P Name="FontSize">12</P>
-    <P Name="FontWeight">normal</P>
-    <P Name="FontAngle">normal</P>
     <P Name="Configuration">{&quot;components&quot;:[{&quot;name&quot;:&quot;BackgroundImageComponent&quot;,&quot;settings&quot;:{&quot;image&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;position&quot;:[0,0,1,1]}},{&quot;name&quot;:&quot;ButtonStateComponent&quot;,&quot;settings&quot;:{&quot;buttonType&quot;:&quot;momentary&quot;,&quot;clickFcn&quot;:&quot;showExample(&apos;simulink_general\/VanDerPolOscillatorExample&apos;)&quot;,&quot;onValue&quot;:1,&quot;position&quot;:[0,0,1,1],&quot;pressDelay&quot;:&quot;500&quot;,&quot;pressFcn&quot;:&quot;&quot;,&quot;repeatInterval&quot;:&quot;0&quot;,&quot;states&quot;:[{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;?&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;},{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;?&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;},{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;?&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;},{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;?&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;}]}},{&quot;name&quot;:&quot;ForegroundImageComponent&quot;,&quot;settings&quot;:{&quot;image&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;isForeground&quot;:1,&quot;position&quot;:[0,0,1,1]}}],&quot;settings&quot;:{&quot;BindingType&quot;:&quot;standalone&quot;,&quot;backgroundColor&quot;:[244,244,244,1],&quot;backgroundOffset&quot;:0.2,&quot;backgroundOpacity&quot;:1,&quot;fixedAspectRatio&quot;:&quot;off&quot;,&quot;foregroundColor&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;migratedFromLegacy&quot;:true,&quot;useBackgroundColor&quot;:true,&quot;variant&quot;:&quot;callback&quot;,&quot;version&quot;:&quot;R2023a&quot;},&quot;type&quot;:&quot;Button&quot;}</P>
     <P Name="CustomBackgroundColor">{&quot;color&quot;:[0.9568627451,0.9568627451,0.9568627451],&quot;show&quot;:true}</P>
   </Block>
@@ -1185,9 +1175,14 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="Position">[25, 95, 45, 115]</P>
     <P Name="ZOrder">291</P>
   </Block>
+  <Block BlockType="Gain" Name="Gain" SID="59">
+    <P Name="Position">[240, 135, 270, 165]</P>
+    <P Name="ZOrder">298</P>
+    <P Name="Gain">2</P>
+  </Block>
   <Block BlockType="Reference" Name="Mu" SID="37">
     <PortCounts in="1" out="1"/>
-    <P Name="Position">[215, 135, 245, 165]</P>
+    <P Name="Position">[185, 135, 215, 165]</P>
     <P Name="ZOrder">294</P>
     <P Name="LibraryVersion">6.1</P>
     <P Name="SourceBlock">simulink/Math
@@ -1201,7 +1196,7 @@ Gain</P>
       <P Name="RTWMemSecDataInternal">Inherit from model</P>
       <P Name="RTWMemSecDataParameters">Inherit from model</P>
       <P Name="ContentPreviewEnabled">on</P>
-      <P Name="gain">1</P>
+      <P Name="gain">2</P>
       <P Name="low">0</P>
       <P Name="high">2</P>
     </InstanceData>
@@ -1279,20 +1274,11 @@ Gain</P>
       </Port>
     </PortProperties>
   </Block>
-  <Block BlockType="Outport" Name="Out1" SID="48">
-    <P Name="Position">[680, 137, 710, 153]</P>
-    <P Name="ZOrder">283</P>
-    <P Name="ShowName">off</P>
-    <P Name="HideAutomaticName">off</P>
-    <P Name="InitialOutput">0</P>
-    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
-  </Block>
   <Block BlockType="Outport" Name="Out2" SID="49">
     <P Name="Position">[680, 247, 710, 263]</P>
     <P Name="ZOrder">282</P>
     <P Name="ShowName">off</P>
     <P Name="HideAutomaticName">off</P>
-    <P Name="Port">2</P>
     <P Name="InitialOutput">0</P>
     <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
   </Block>
@@ -1318,10 +1304,6 @@ Gain</P>
       <P Name="Dst">55#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">135</P>
-      <P Name="Dst">48#in:1</P>
-    </Branch>
-    <Branch>
       <P Name="ZOrder">133</P>
       <P Name="Points">[0, -65; -305, 0]</P>
       <Branch>
@@ -1343,9 +1325,9 @@ Gain</P>
     <P Name="Dst">41#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">148</P>
+    <P Name="ZOrder">186</P>
     <P Name="Src">37#out:1</P>
-    <P Name="Dst">44#in:2</P>
+    <P Name="Dst">59#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">140</P>
@@ -1388,6 +1370,11 @@ Gain</P>
       <P Name="Dst">46#in:1</P>
     </Branch>
   </Line>
+  <Line>
+    <P Name="ZOrder">187</P>
+    <P Name="Src">59#out:1</P>
+    <P Name="Dst">44#in:2</P>
+  </Line>
   <Annotation SID="20">
     <P Name="Name">x&apos;&apos; - µ(1-x^2) x&apos; + x = 0</P>
     <P Name="Position">[264, 39, 376, 58]</P>
@@ -1426,7 +1413,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
   <Object PropName="BdWindowsInfo" ObjectID="1" ClassName="Simulink.BDWindowsInfo">
     <Object PropName="WindowsInfo" ObjectID="2" ClassName="Simulink.WindowInfo">
       <P Name="IsActive" Class="logical">1</P>
-      <P Name="Location" Class="double">[58.0, 135.0, 1771.0, 1375.0]</P>
+      <P Name="Location" Class="double">[399.0, 129.0, 1771.0, 1375.0]</P>
       <Object PropName="ModelBrowserInfo" ObjectID="3" ClassName="Simulink.ModelBrowserInfo">
         <P Name="Visible" Class="logical">0</P>
         <P Name="DockPosition" Class="char">Left</P>
@@ -1513,7 +1500,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">5c974986-99fb-4314-84ea-3026b7b5d4db</P>
     </Object>
-    <P Name="BDUuid" Class="char">321136b3-2396-4b2f-850f-95de8b22bc68</P>
+    <P Name="BDUuid" Class="char">0bfb96a9-d413-42b3-80ad-443bf61bacc1</P>
   </Object>
 </WindowsInfo>
 
