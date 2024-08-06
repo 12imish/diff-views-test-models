@@ -55,8 +55,8 @@ values midway between each voltage point, resulting in a 1/2-width interval at
 0 Volts and a 3/2-width interval just below 5 Volts.
 </dc:description>
   <cp:lastModifiedBy>neham</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-07-25T08:40:35Z</dcterms:modified>
-  <cp:revision>11.1</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2024-07-23T09:52:22Z</dcterms:modified>
+  <cp:revision>11.0</cp:revision>
   <cp:version>R2024a</cp:version>
 </cp:coreProperties>
 
@@ -130,7 +130,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInformation Version="1.0">
   <Model>
-    <P Name="ModelUUID">26771fe3-9c1e-4919-9e58-3c966c6d184f</P>
+    <P Name="ModelUUID">7485f23a-b63d-4d41-9916-92778f16e986</P>
     <P Name="CloseFcn">if exist(&apos;adc_ploth&apos;)
   if ishghandle(adc_ploth,&apos;figure&apos;)
     close(adc_ploth)
@@ -160,7 +160,7 @@ end
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:11.1&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:11.0&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -967,14 +967,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSetInfo.xml
 __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.xml
 <?xml version="1.0" encoding="utf-8"?>
 <GraphicalInterface>
-  <P Name="NumRootInports">1</P>
-  <Inport Name="Inport">
-    <P Name="BusObject"/>
-    <P Name="OutputFunctionCall">off</P>
-    <P Name="InportServerType">off</P>
-    <P Name="SampleTime">-1</P>
-    <P Name="UnitExpr">inherit</P>
-  </Inport>
+  <P Name="NumRootInports">0</P>
   <P Name="NumRootOutports">3</P>
   <Outport Name="E_volts_in_bit_units">
     <P Name="BusObject"/>
@@ -988,7 +981,7 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.xml
     <P Name="UnitExpr">inherit</P>
     <P Name="OutportClientType">off</P>
   </Outport>
-  <Outport Name="Output">
+  <Outport Name="bit_edges">
     <P Name="BusObject"/>
     <P Name="BusOutputAsStruct">off</P>
     <P Name="UnitExpr">inherit</P>
@@ -1030,8 +1023,8 @@ Sequence</P>
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2023a_20220628">
-  <System type="System" uuid="bb52903b-1c0f-4464-83a9-64b57a959ae9">
-    <Interface type="Interface" uuid="f019db7f-2ffb-4840-af0a-c3bf3e81938c"/>
+  <System type="System" uuid="930adac1-4af0-45f9-9de1-3159fe89d013">
+    <Interface type="Interface" uuid="e2c530f2-72e9-4fa1-abec-6f793f402dcf"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
@@ -1096,9 +1089,81 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/machine.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="system_1" Target="system_1.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_10" Target="system_10.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_9" Target="system_9.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[748, 206, 1475, 886]</P>
+  <Block BlockType="Inport" Name="v" SID="2">
+    <P Name="Position">[45, 66, 80, 84]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="HitCross" Name="Hit &#xA;Crossing" SID="3">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[450, 60, 480, 90]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="4">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[380, 65, 400, 85]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="ShowName">off</P>
+    <P Name="Inputs">|+-</P>
+  </Block>
+  <Block BlockType="Bias" Name="setround" SID="5">
+    <P Name="Position">[165, 62, 210, 88]</P>
+    <P Name="ZOrder">-4</P>
+    <P Name="Bias">0.5</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Rounding" Name="transition" SID="6">
+    <P Name="Position">[280, 62, 320, 88]</P>
+    <P Name="ZOrder">-5</P>
+  </Block>
+  <Block BlockType="Outport" Name="hits" SID="7">
+    <P Name="Position">[540, 68, 570, 82]</P>
+    <P Name="ZOrder">-6</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">4#out:1</P>
+    <P Name="Dst">3#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">5#out:1</P>
+    <P Name="Dst">6#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">6#out:1</P>
+    <P Name="Dst">4#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">3#out:1</P>
+    <P Name="Dst">7#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">2#out:1</P>
+    <P Name="Points">[30, 0]</P>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Dst">5#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Points">[0, 60; 275, 0]</P>
+      <P Name="Dst">4#in:2</P>
+    </Branch>
+  </Line>
+</System>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/system_10.xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1149,18 +1214,15 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_9.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[8, 35, 2466, 1744]</P>
+  <P Name="Location">[8, 35, 1541, 1185]</P>
   <P Name="Open">on</P>
-  <P Name="ZoomFactor">406</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">25</P>
-  <Block BlockType="Inport" Name="Inport" SID="23">
-    <P Name="Position">[375, 163, 405, 177]</P>
-    <P Name="ZOrder">176</P>
-  </Block>
-  <Block BlockType="Gain" Name="Gain" SID="24">
-    <P Name="Position">[440, 155, 470, 185]</P>
-    <P Name="ZOrder">177</P>
+  <P Name="SIDHighWatermark">22</P>
+  <Block BlockType="SubSystem" Name="Find edges of &#xA;bit transitions in time" SID="1">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[420, 305, 465, 335]</P>
+    <P Name="ZOrder">-1</P>
+    <System Ref="system_1"/>
   </Block>
   <Block BlockType="Reference" Name="Idealized ADC quantizer" SID="8">
     <PortCounts in="1" out="1"/>
@@ -1178,7 +1240,7 @@ Discrete/Idealized ADC quantizer</P>
       <P Name="RTWMemSecDataInternal">Inherit from model</P>
       <P Name="RTWMemSecDataParameters">Inherit from model</P>
       <P Name="ContentPreviewEnabled">off</P>
-      <P Name="NumberOfConverterBits">16</P>
+      <P Name="NumberOfConverterBits">12</P>
       <P Name="Vmin">0</P>
       <P Name="Vmax">5</P>
       <P Name="OutputDataType">int16</P>
@@ -1199,7 +1261,7 @@ Discrete/Idealized ADC quantizer</P>
   </Block>
   <Block BlockType="SubSystem" Name="Rescale volts to&#xA;match ADC signal" SID="10">
     <PortCounts in="1" out="1"/>
-    <P Name="Position">[350, 207, 430, 243]</P>
+    <P Name="Position">[235, 247, 315, 283]</P>
     <P Name="ZOrder">-4</P>
     <System Ref="system_10"/>
   </Block>
@@ -1218,7 +1280,7 @@ Sequence</P>
       <P Name="RTWMemSecDataInternal">Inherit from model</P>
       <P Name="RTWMemSecDataParameters">Inherit from model</P>
       <P Name="ContentPreviewEnabled">off</P>
-      <P Name="rep_seq_t">[0 700]</P>
+      <P Name="rep_seq_t">[0 7000]</P>
       <P Name="rep_seq_y">[-0.25, 7]</P>
     </InstanceData>
     <PortProperties>
@@ -1228,7 +1290,7 @@ Sequence</P>
     </PortProperties>
   </Block>
   <Block BlockType="Outport" Name="E_volts_in_bit_units" SID="16">
-    <P Name="Position">[565, 218, 595, 232]</P>
+    <P Name="Position">[575, 258, 605, 272]</P>
     <P Name="ZOrder">-6</P>
     <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
   </Block>
@@ -1238,10 +1300,11 @@ Sequence</P>
     <P Name="Port">2</P>
     <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
   </Block>
-  <Block BlockType="Outport" Name="Output" SID="25">
-    <P Name="Position">[505, 163, 535, 177]</P>
-    <P Name="ZOrder">179</P>
+  <Block BlockType="Outport" Name="bit_edges" SID="18">
+    <P Name="Position">[575, 313, 605, 327]</P>
+    <P Name="ZOrder">-8</P>
     <P Name="Port">3</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
   </Block>
   <Line>
     <P Name="Name">V</P>
@@ -1251,7 +1314,7 @@ Sequence</P>
     <P Name="Points">[60, 0]</P>
     <Branch>
       <P Name="ZOrder">2</P>
-      <P Name="Points">[0, 95]</P>
+      <P Name="Points">[0, 135]</P>
       <P Name="Dst">10#in:1</P>
     </Branch>
     <Branch>
@@ -1267,18 +1330,64 @@ Sequence</P>
   <Line>
     <P Name="ZOrder">5</P>
     <P Name="Src">10#out:1</P>
-    <P Name="Dst">16#in:1</P>
+    <P Name="Points">[50, 0]</P>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Dst">16#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Points">[0, 55]</P>
+      <P Name="Dst">1#in:1</P>
+    </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">9</P>
-    <P Name="Src">23#out:1</P>
-    <P Name="Dst">24#in:1</P>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">1#out:1</P>
+    <P Name="Dst">18#in:1</P>
   </Line>
-  <Line>
-    <P Name="ZOrder">10</P>
-    <P Name="Src">24#out:1</P>
-    <P Name="Dst">25#in:1</P>
-  </Line>
+  <Annotation SID="19">
+    <P Name="Name">Analog to Digital Converter (ADC)
+quantization algorithm
+(zero conversion time)</P>
+    <P Name="Position">[225, 22, 483, 81]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="FontName">Arial</P>
+    <P Name="FontSize">16</P>
+    <P Name="FontWeight">bold</P>
+  </Annotation>
+  <Annotation SID="20">
+    <P Name="Name">The blocks driving outports 1 and 3 convert the 
+continuous reference signal into equivalent &quot;bit units&quot; 
+to capture bit transitions in time so the plot 
+shows the transitions clearly.</P>
+    <P Name="Position">[159, 371, 577, 449]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">blue</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="FontName">Arial</P>
+    <P Name="FontSize">16</P>
+    <P Name="FontWeight">bold</P>
+  </Annotation>
+  <Annotation SID="21">
+    <P Name="Name">Run the simulation.
+Visualize quantization effects 
+with the plot created after the run.</P>
+    <P Name="Position">[349, 162, 608, 221]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">blue</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="FontName">Arial</P>
+    <P Name="FontSize">16</P>
+    <P Name="FontWeight">bold</P>
+  </Annotation>
+  <Annotation SID="22">
+    <P Name="Name">Copyright 1990-2013 The MathWorks, Inc.</P>
+    <P Name="Position">[240, 475, 476, 489]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-4</P>
+  </Annotation>
 </System>
 
 __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
@@ -1287,7 +1396,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
   <Object PropName="BdWindowsInfo" ObjectID="1" ClassName="Simulink.BDWindowsInfo">
     <Object PropName="WindowsInfo" ObjectID="2" ClassName="Simulink.WindowInfo">
       <P Name="IsActive" Class="logical">1</P>
-      <P Name="Location" Class="double">[8.0, 35.0, 2458.0, 1709.0]</P>
+      <P Name="Location" Class="double">[8.0, 35.0, 1533.0, 1150.0]</P>
       <Object PropName="ModelBrowserInfo" ObjectID="3" ClassName="Simulink.ModelBrowserInfo">
         <P Name="Visible" Class="logical">0</P>
         <P Name="DockPosition" Class="char">Left</P>
@@ -1304,13 +1413,25 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
         <P Name="IsTabbed" Class="logical">1</P>
         <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
         <P Name="LoadSaveID" Class="char">0</P>
-        <P Name="Extents" Class="double">[2418.0, 1473.0]</P>
-        <P Name="ZoomFactor" Class="double">4.0625746992111766</P>
-        <P Name="Offset" Class="double">[47.678909518828448, 12.211025758368208]</P>
-        <P Name="SceneRectInView" Class="double">[47.678909518828448, 12.211025758368208, 595.1890559623431, 362.57794848326358]</P>
+        <P Name="Extents" Class="double">[1493.0, 914.0]</P>
+        <P Name="ZoomFactor" Class="double">1.0</P>
+        <P Name="Offset" Class="double">[0.0, 0.0]</P>
+        <P Name="SceneRectInView" Class="double">[0.0, 0.0, 1493.0, 914.0]</P>
       </Object>
       <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
         <Object ObjectID="6">
+          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
+          <P Name="ID" Class="char">Property Inspector</P>
+          <P Name="Visible" Class="logical">0</P>
+          <P Name="CreateCallback" Class="char"/>
+          <P Name="UserData" Class="char"/>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Right</P>
+          <P Name="Width" Class="int32">640</P>
+          <P Name="Height" Class="int32">480</P>
+          <P Name="Minimized" Class="char">Unset</P>
+        </Object>
+        <Object ObjectID="7">
           <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
           <P Name="ID" Class="char">Referenced Files</P>
           <P Name="Visible" Class="logical">0</P>
@@ -1323,24 +1444,12 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
-        <Object ObjectID="7">
-          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
-          <P Name="ID" Class="char">Property Inspector</P>
-          <P Name="Visible" Class="logical">0</P>
-          <P Name="CreateCallback" Class="char"/>
-          <P Name="UserData" Class="char"/>
-          <P Name="Floating" Class="logical">0</P>
-          <P Name="DockPosition" Class="char">Right</P>
-          <P Name="Width" Class="int32">640</P>
-          <P Name="Height" Class="int32">480</P>
-          <P Name="Minimized" Class="char">Unset</P>
-        </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAACLPwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAQAAAAiwAAABiAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAiQD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAAAAAAAAA/AEAAAAB+/////8AAAAAAP////8AAAJ5AP///wAACZgAAAX+AAAAAQAAAAIAAAABAAAAAvwAAAABAAAAAgAAAAA=</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAACLPwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAQAAAAiwAAABiAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAiQD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAAAAAAAAA/AEAAAAB+/////8AAAAAAP////8AAAJ5AP///wAABfsAAAPPAAAAAQAAAAIAAAABAAAAAvwAAAABAAAAAgAAAAA=</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
-      <P Name="WindowUuid" Class="char">67c4f1d5-9ce0-4a30-9f1c-2b968f8ea5c3</P>
+      <P Name="WindowUuid" Class="char">2ca210e6-9863-4ee1-96fd-a2a16e4fc707</P>
     </Object>
-    <P Name="BDUuid" Class="char">ca033c98-3f4c-41a2-bb9f-12dab8a8ccd1</P>
+    <P Name="BDUuid" Class="char">841c6662-8277-4231-8542-480d816bc925</P>
   </Object>
 </WindowsInfo>
 
